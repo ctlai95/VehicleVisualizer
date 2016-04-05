@@ -15,6 +15,53 @@ $(function() {
     });
 });
 
+// Add the number of years in the options
+
+var years = {"year 1": "2016",
+  "year 2": "2015",
+  "year 3": "2014",
+  "year 4": "2013",
+  "year 5": "2012",
+  "year 6": "2011",
+  "year 7": "2010",
+  "year 8": "2009",
+  "year 9": "2008",
+  "year 10": "2007",
+  "year 11": "2006"
+};
+
+var cars = {"car 1": "Ferrari"};
+
+var models = {
+    "car 1": "F12Berlinetta",
+    "car 2": "GTC4Lusso",
+    "car 3": "488 GTB",
+    "car 4": "488 Spider",
+    "car 5": "58 Speciale",
+    "car 6": "California",
+}
+
+var $ysel = $("#year_select");
+$ysel.empty(); // remove old years
+$.each(years, function(value,key) {
+  $ysel.append($("<option></option>")
+     .attr("value", value).text(key));
+});
+
+var $csel = $("#car_select");
+$csel.empty(); // remove old cars
+$.each(cars, function(value,key) {
+  $csel.append($("<option></option>")
+     .attr("value", value).text(key));
+});
+
+var $msel = $("#model_select");
+$msel.empty(); // remove old models
+$.each(models, function(value,key) {
+  $msel.append($("<option></option>")
+     .attr("value", value).text(key));
+});
+
 // Floating label headings for the contact form
 $(function() {
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
