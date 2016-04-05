@@ -85,13 +85,126 @@
         </div>
     </header>
 
-    <!-- Portfolio Grid Section -->
+    <!-- Portfolio Section -->
     <section id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Choose your vehicle.</h2>
-                    <hr class="star-primary">
+                  <h2>Choose your vehicle.</h2>
+                  <hr class="star-primary">
+                  <!-- Include Bootstrap-select CSS, JS -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/css/bootstrap-select.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
+
+<style type="text/css">
+#bootstrapSelectForm .selectContainer .form-control-feedback {
+    /* Adjust feedback icon position */
+    right: -15px;
+}
+</style>
+
+<form id="bootstrapSelectForm" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Vehicle Year</label>
+        <div class="col-xs-6 selectContainer">
+            <select name="colors" class="form-control">
+              <option></option>
+                <option>2016</option>
+                <option>2015</option>
+                <option>2014</option>
+                <option>2013</option>
+                <option>2012</option>
+                <option>2011</option>
+                <option>2010</option>
+                <option>2009</option>
+                <option>2008</option>
+                <option>2007</option>
+                <option>2006</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Vehicle Make</label>
+        <div class="col-xs-6 selectContainer">
+            <select name="language" class="form-control">
+                <option value=""></option>
+                <option>Ferrari</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Vehicle Model</label>
+        <div class="col-xs-6 selectContainer">
+            <select name="language" class="form-control">
+                <option value=""></option>
+                <option>F12Berlinetta</option>
+                <option>GTC4Lusso</option>
+                <option>488 GTB</option>
+                <option>488 Spider</option>
+                <option>458 Speciale</option>
+                <option>California T</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-5 col-xs-offset-3">
+            <button type="submit" class="btn btn-default">Go</button>
+        </div>
+    </div>
+</form>
+
+<script>
+$(document).ready(function() {
+    $('#bootstrapSelectForm')
+        .find('[name="colors"]')
+            .selectpicker()
+            .change(function(e) {
+                // revalidate the color when it is changed
+                $('#bootstrapSelectForm').formValidation('revalidateField', 'colors');
+            })
+            .end()
+        .find('[name="language"]')
+            .selectpicker()
+            .change(function(e) {
+                // revalidate the language when it is changed
+                $('#bootstrapSelectForm').formValidation('revalidateField', 'language');
+            })
+            .end()
+        .formValidation({
+            framework: 'bootstrap',
+            excluded: ':disabled',
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                colors: {
+                    validators: {
+                        callback: {
+                            message: 'Please choose 2-4 colors you like most',
+                            callback: function(value, validator, $field) {
+                                // Get the selected options
+                                var options = validator.getFieldElements('colors').val();
+                                return (options != null && options.length >= 2 && options.length <= 4);
+                            }
+                        }
+                    }
+                },
+                language: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please select your native language.'
+                        }
+                    }
+                }
+            }
+        });
+});
+</script>
                 </div>
             </div>
         </div>
@@ -472,6 +585,8 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
+
+
 
 </body>
 
