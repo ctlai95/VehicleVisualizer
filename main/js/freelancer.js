@@ -85,7 +85,12 @@ $('.navbar-collapse ul li a').click(function() {
 
 
 // Change the exterior vehicle color
-function changeImage(my_car){
-  image=document.getElementById('my_car');
-  image.src=my_car;
+function changeExterior(my_color){
+  image=document.getElementById('my_exterior');
+  image.src=my_color;
+}
+
+function changeInterior(my_color){
+  image=document.getElementById('my_interior');
+  image.src=my_color;
 }

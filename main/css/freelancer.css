@@ -413,6 +413,7 @@ footer .footer-below {
 
 .portfolio-modal .modal-content img {
     margin-bottom: 30px;
+    width: 1500px;
 }
 
 .portfolio-modal .modal-content .item-details {
@@ -457,4 +458,12 @@ footer .footer-below {
 .portfolio-modal .modal-backdrop {
     display: none;
     opacity: 0;
+}
+
+.ext-container{
+  transform: translateX(+30%);
+}
+
+.int-container{
+  transform: translateX(+37%);
 }
