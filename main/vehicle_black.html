@@ -44,7 +44,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">Vehicle Visualizer</a>
+                <a class="navbar-brand" href="index.html">Vehicle Visualizer</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,7 +54,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Vehicle</a>
+                        <a href="#portfolio">Customize</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#about">About</a>
@@ -77,89 +77,97 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="img/landing6.png" alt="">
                     <div class="intro-text">
-                        <span class="name">Vehicle Visualizer</span>
+                        <span class="name">Ferrari 488 Spider</span>
+                        <h1>Exterior</h1>
                         <hr class="star-light">
-                        <span class="skills">Visualize your vehicle.</span>
                     </div>
+                    <img class="img-responsive" src="img/black_spider.png" alt="">
+
+                    <div class="exterior_colors">
+                    <form action="vehicle_yellow.html"><input type="image" src="img/yellow.jpg"></form>
+                    <form action="vehicle_red.html"><input type="image" src="img/red.jpg"></form>
+                    <form action="vehicle_blue.html"><input type="image" src="img/blue.jpg"></form>
+                    <form action="vehicle_black.html"><input type="image" src="img/black.jpg"></form>
+                    <form action="vehicle_white.html"><input type="image" src="img/white.jpg"></form>
+                  </div>
+
+
+
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio Grid Section -->
     <section id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                  <h2>Choose your vehicle.</h2>
-                  <hr class="star-primary">
-                  <!-- Include Bootstrap-select CSS, JS -->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/css/bootstrap-select.min.css" />
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
-
-<style type="text/css">
-#bootstrapSelectForm .selectContainer .form-control-feedback {
-    /* Adjust feedback icon position */
-    right: -15px;
-}
-</style>
-
-<form id="bootstrapSelectForm" action="vehicle_yellow.html" method="post" class="form-horizontal">
-    <div class="form-group">
-        <label class="col-xs-3 control-label">Vehicle Year</label>
-        <div class="col-xs-6 selectContainer">
-            <select name="year" class="form-control">
-              <option></option>
-                <option>2016</option>
-                <option>2015</option>
-                <option>2014</option>
-                <option>2013</option>
-                <option>2012</option>
-                <option>2011</option>
-                <option>2010</option>
-                <option>2009</option>
-                <option>2008</option>
-                <option>2007</option>
-                <option>2006</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-xs-3 control-label">Vehicle Make</label>
-        <div class="col-xs-6 selectContainer">
-            <select name="make" class="form-control">
-                <option value=""></option>
-                <option>Ferrari</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-xs-3 control-label">Vehicle Model</label>
-        <div class="col-xs-6 selectContainer">
-            <select name="model" class="form-control">
-                <option value=""></option>
-                <option>F12Berlinetta</option>
-                <option>GTC4Lusso</option>
-                <option>488 GTB</option>
-                <option>488 Spider</option>
-                <option>458 Speciale</option>
-                <option>California T</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-xs-6 col-xs-offset-3">
-            <button type="submit" form="bootstrapSelectForm" class="btn btn-default">Go</button>
-        </div>
-    </div>
-</form>
-
-
+                    <h2>Interior</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/cake.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/circus.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/game.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/safe.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
+                    </a>
                 </div>
             </div>
         </div>
