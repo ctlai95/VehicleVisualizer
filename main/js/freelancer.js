@@ -35,3 +35,10 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+
+// Change the exterior vehicle color
+function changeImage(my_car){
+  image=document.getElementById('my_car');
+  image.src=my_car;
+}
