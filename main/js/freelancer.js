@@ -94,3 +94,8 @@ function changeInterior(my_color){
   image=document.getElementById('my_interior');
   image.src=my_color;
 }
+
+ $('#car_submit').on("click",function() {
+     var selected = $("#model_select option:selected").text();
+     localStorage.setItem("model", selected);
+ });
