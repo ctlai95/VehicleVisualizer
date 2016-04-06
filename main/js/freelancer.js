@@ -17,28 +17,16 @@ $(function() {
 
 // Add the number of years in the options
 
-var years = {"year 1": "2016",
-  "year 2": "2015",
-  "year 3": "2014",
-  "year 4": "2013",
-  "year 5": "2012",
-  "year 6": "2011",
-  "year 7": "2010",
-  "year 8": "2009",
-  "year 9": "2008",
-  "year 10": "2007",
-  "year 11": "2006"
+var years = {
+  "2016": "2016",
 };
 
-var cars = {"car 1": "Ferrari"};
+var cars = {
+  "Ferrari": "Ferrari"};
 
 var models = {
-    "car 1": "F12Berlinetta",
-    "car 2": "GTC4Lusso",
-    "car 3": "488 GTB",
-    "car 4": "488 Spider",
-    "car 5": "58 Speciale",
-    "car 6": "California",
+    "488 Spider": "488 Spider",
+    "F12 Berlinetta": "F12 Berlinetta"
 }
 
 var $ysel = $("#year_select");
@@ -93,4 +81,12 @@ function changeExterior(my_color){
 function changeInterior(my_color){
   image=document.getElementById('my_interior');
   image.src=my_color;
+}
+
+function getUrlVars() {
+var vars = {};
+var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+vars[key] = value;
+});
+return vars;
 }
