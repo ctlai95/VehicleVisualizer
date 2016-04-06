@@ -48,7 +48,7 @@ $.each(years, function(value,key) {
      .attr("value", value).text(key));
 });
 
-var $csel = $("#car_select");
+var $csel = $("#make_select");
 $csel.empty(); // remove old cars
 $.each(cars, function(value,key) {
   $csel.append($("<option></option>")
@@ -96,6 +96,10 @@ function changeInterior(my_color){
 }
 
  $('#car_submit').on("click",function() {
-     var selected = $("#model_select option:selected").text();
-     localStorage.setItem("model", selected);
+   var selectedYear = $("#year_select option:selected").text();
+   var selectedMake= $("#make_select option:selected").text();
+   var selectedModel = $("#model_select option:selected").text();
+   localStorage.setItem("year", selectedYear);
+   localStorage.setItem("make", selectedMake);
+   localStorage.setItem("model", selectedModel);
  });
