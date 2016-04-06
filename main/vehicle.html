@@ -11,25 +11,6 @@
 
     <title>Vehicle Visualizer</title>
 
-    <script type="text/javascript">
-    function myFunction() {
-        var year = getParameterByName('year');
-        var make = getParameterByName('make');
-        var model = getParameterByName('model');
-        document.getElementById("car_name").innerHTML = year+' '+make+' '+model;
-    }
-    function getParameterByName(name, url) {
-      if (!url) url = window.location.href;
-      name = name.replace(/[\[\]]/g, "\\$&");
-      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i"),
-        results = regex.exec(url);
-      if (!results) return null;
-      if (!results[2]) return '';
-      return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-    window.onload=myFunction;
-    </script>
-
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -73,13 +54,13 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#exterior">Exterior</a>
+                        <a href="#page-top">Exterior</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#portfolio">Interior</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">Save</a>
+                        <a href="#about">About</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
@@ -99,10 +80,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="intro-text" id="exterior">
-                        <span class="name" id="car_name"></span>
+                    <div class="intro-text">
+                        <span class="name">Ferrari 488 Spider</span>
                         <h1>Exterior</h1>
-                      </a>
                         <hr class="star-light">
                     </div>
                     <img class="img-responsive" src="img/yellow_spider.png" id="my_exterior" alt="">
@@ -167,16 +147,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Save Configuration</h2>
+                    <h2>About</h2>
                     <hr class="star-light">
                 </div>
             </div>
             <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                  <a href="#" class="btn btn-lg btn-outline">
-                      <i class="fa fa-save"></i>
-                  </a>
-              </div>
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>Vehicle Visualizer is a free web application. It allows users to visualize their desired vehicles in different colors.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Whether you're ready to purchase a vehicle or simply just browsing, Vehicle Visualizer is the software for you!</p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -186,7 +168,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Book a Test Drive</h2>
+                    <h2>Contact Us</h2>
                     <hr class="star-primary">
                 </div>
             </div>
@@ -290,6 +272,76 @@
         </a>
     </div>
 
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Tortora</h2>
+                            <hr class="star-primary">
+                            <img src="img/gray_interior.png" class="img-responsive img-centered" alt="">
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Rosso Ferrari</h2>
+                            <hr class="star-primary">
+                            <img src="img/rosso_interior.png" class="img-responsive img-centered" alt="">
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Iroko</h2>
+                            <hr class="star-primary">
+                            <img src="img/iroko_interior.png" class="img-responsive img-centered" alt="">
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
