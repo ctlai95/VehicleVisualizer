@@ -97,6 +97,16 @@ function changeInterior(my_color){
   image.src=my_color;
 }
 
+function invokeUpload(elemId){
+  var elem = document.getElementById(elemId);
+  if(elem&&document.createEvent){
+    var evt=document.createEvent("MouseEvents");
+    evt.initEvent("click", true, false);
+    elem.dispatchEvent(evt);
+  }
+
+}
+
  $('#car_submit').on("click",function() {
    var selectedYear = $("#year_select option:selected").text();
    var selectedMake= $("#make_select option:selected").text();
